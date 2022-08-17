@@ -32,7 +32,10 @@ def validate_data(values):
     Raises Valueerror if strings canno't be coveres=d into int,
     or if there arent't exactly values.
     """
+    
+    print(values)
     try:
+        [int(value) for value in values]
         if len(values) != 6:
             raise ValueError(
                 f"Exactly 6 values requred, you provided {len(values)}"
